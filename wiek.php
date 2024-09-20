@@ -21,7 +21,7 @@ h2{
     <p> <?php $wiek = rand(0,100);?></p>
     <h1><?php 
     if($wiek<2) echo "Mam rok";
-    else if($wiek==2 || $wiek==3 || $wiek==4 || $wiek&10==2 || $wiek&10==3 || $wiek&10==4) echo "Mam {$wiek} lata";
+    else if($wiek==2 || $wiek==3 || $wiek==4 || $wiek%10==2 || $wiek%10==3 || $wiek%10==4) echo "Mam {$wiek} lata";
     else if($wiek==0) echo "Albo mam kilka miesiecy albo sie nie urdoziłem";
     else if($wiek>4) echo "Mam {$wiek} lat";?>
     </h1>
