@@ -16,17 +16,21 @@ table,td,tr{
 <body>
     <table>
 <?php
+$i=0;
+$ty = array("pon","wto","sro","czw","pio","sob","nie");
 
-$ty[0] = "pon";
-$ty[1] = "wto";
-$ty[2] = "sro";
-$ty[3] = "czw";
-$ty[4] = "pio";
-$ty[5] = "sob";
-$ty[6] = "nie";
-$i = 1;
 foreach($ty as $element){
-    echo "<tr>{$element}</tr>";
+    if($i%2==0){
+        echo "<td>";
+        echo $element;
+        echo "</td>";
+        $i++;
+    }
+else{
+    echo '<td style="background-color: cyan;">';
+    echo $element."</td>";
+    $i++;
+}
     }
 
 
