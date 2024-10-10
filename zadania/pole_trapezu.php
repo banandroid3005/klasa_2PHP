@@ -15,7 +15,7 @@ $b=17;
 $h=8;
 
 $w=(($a+$b)*$h)/2;
-echo "Pole trapezu o podstawach długosci {$a} i {$b} oraz wysokości równej {$h} wynosi {$w} j<small>2</small>";
+echo "Pole trapezu o podstawach długosci {$a} i {$b} oraz wysokości równej {$h} wynosi {$w} j<sup>2</sup>";
 
 ?>
 </blockquote>
