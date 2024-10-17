@@ -19,7 +19,8 @@
     <?php
     $i=1;
     while($i<6){
-        echo "<tr><td>To jest wiersz numer {$i}</td></tr>";
+        echo "<tr>";
+        echo "<td>To jest wiersz numer {$i}</td>";
         $i++;
     }
     ?>
