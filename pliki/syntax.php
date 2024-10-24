@@ -12,7 +12,7 @@
     <p><?php echo "Tu " . "funkcja ". "echo". "<br>";?></p>
     <p><?php print("Zgłasza się funkcja print <br>");?></p>
     <p><?php print("Zgłasza "."się "."funkcja "."print"."<br>");?></p>
-    <p<?php
+    <p><?php
     // komentarz jednoliniowy
 # jnj
 /* Komentarz
