@@ -20,16 +20,16 @@ class Dzielenie{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Obiektowość</title>
 </head>
 <body>
     <?php
 
     $obiekt = new Dzielenie();
-    $obiekt->liczbaA = 10;
-    $obiekt->liczbaB = 2;
+    $obiekt->liczbaA = 128;
+    $obiekt->liczbaB = 10;
 
     ?>
-    <p>Dzielenie: <?= $obiekt->liczbaA?> / <?= $obiekt->liczbaB?> = <?= $obiekt->dzielenie()?></p>
+    <p><b>Iloraz liczb <?= $obiekt->liczbaA?> i <?= $obiekt->liczbaB?> wynosi <?= $obiekt->dzielenie()?></b></p>
 </body>
 </html>
