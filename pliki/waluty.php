@@ -51,7 +51,7 @@ public function GDPtoPLN()
 }
 
 $obj = new Waluty();
-$obj->liczbaA = 1.0;
+$obj->liczbaA = 20;
 ?>
 <!DOCTYPE html>
 <html lang="en">
