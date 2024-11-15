@@ -8,7 +8,7 @@ $d = new OkragSferaKula($tmp = rand(0,99));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Okrąg Sfera Kula</title>
 </head>
 <style>
     body{
@@ -38,7 +38,7 @@ $d = new OkragSferaKula($tmp = rand(0,99));
     <table>
 <tr><td colspan="3">Promien kuli: r = <?=$tmp?></td></tr>
 <tr><td>Obwód</td><td>Pole powierzchni</td><td>Objętość</td></tr>
-<tr><td><em>L = 2 &#x03C0;r</em></td><td><em>P = 4 &#x03C0;r<sup>2</sup></em></td><td><em>V = ⅓ ‧ 4 &#x03C0;r<sup>3</sup></em></td></tr>
+<tr><td><em>L = 2&#x03C0;r</em></td><td><em>P = 4&#x03C0;r<sup>2</sup></em></td><td><em>V = ⅓ ‧ 4&#x03C0;r<sup>3</sup></em></td></tr>
 <tr><td><?=$d->obwod($tmp)?></td><td><?=$d->pole($tmp)?></td><td><?=$d->objetosc($tmp)?></td></tr>
 </table>
 </body>
