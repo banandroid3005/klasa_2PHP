@@ -2,10 +2,10 @@
 
 class Gestosc{
 
-    private ?float $p;
+    private  $p;
     private $substancja;
 
-    public function __construct(float $r,string $s){
+    public function __construct($r,$s){
         $this->p = $r;
         $this->substancja = $s;
     }

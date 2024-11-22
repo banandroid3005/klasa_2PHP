@@ -16,7 +16,7 @@ ol{
 <body>
     <?php
     $obj = new Gestosc(0.05,"Gips");
-    $obj2 = new Gestosc(0.05,"Rtęć");
+    $obj2 = new Gestosc(0.05,"Rtęć"); 
     $obj3 = new Gestosc(0.05,"Złoto");
     $obj4 = new Gestosc(0.05,"Woda");
     ?>
