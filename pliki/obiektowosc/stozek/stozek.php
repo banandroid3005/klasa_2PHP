@@ -3,25 +3,25 @@ include_once 'przeciw.php';
 
 class Stozek extends Przeciw{
 
-    private ?float $promien;
-    private ?float $wysokosc;
+    private  $promien;
+    private  $wysokosc;
 
     public function __construct($r,$h){
         $this->promien = $r;
         $this->wysokosc = $h;
     }
 
-    private function PolePodstawy():float{
+    private function PolePodstawy(){
         return pi() * $this->promien ** 2;
     }
 
-    private function PoleBoczne():float{
+    private function PoleBoczne(){
         return pi() * $this->promien * $this->PPK($this->promien,$this->wysokosc);
     }
-    public function PoleCalkowite():float{
+    public function PoleCalkowite(){
         return $this->PoleBoczne() + $this->PolePodstawy();
     }
-    public function Objetosc():float{
+    public function Objetosc(){
         return (pi() * ($this->promien ** 2) * $this->wysokosc)/3;
     }
 

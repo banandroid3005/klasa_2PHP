@@ -30,7 +30,7 @@ include_once 'stozek.php';
 <body>
     <?php
         $s = new Stozek($tmp = 123.45,$tmp2 =678.09);
-        $j = "km";
+        $j = "cm";
     ?>
     <div id = "s">
         <p>Stożek</p>
