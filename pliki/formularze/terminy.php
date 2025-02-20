@@ -48,7 +48,6 @@
                 for($i=1;$i<=5;$i++){
                     $termin = "termin_".$i;
                     $month = "Rok_".$i;
-                    $plik = $plik || (in_array($termin,$_POST['termin'] ?? []) && $_POST[$month] ? $_POST[$month] : false);
                     $checked = (in_array($termin,$_POST['termin'] ?? []) && isset($_POST[$month]) ? 'checked' : '');
             ?>
             <tr>
@@ -80,6 +79,7 @@
         <pre>
             <?php
                 if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                    $plik = (in_array($termin,($_POST['termin'] ?? [])) && isset($_POST[$month])) ? true : false;
                     if($plik){
                         $file = 'plik.txt';
                         $filehandle = fopen($file,"a");
