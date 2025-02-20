@@ -33,6 +33,15 @@
         'te' => '',
         'zg' => ''
     ];
+
+    $error = [
+        'naz' => '',
+        'wyb' => '',
+        'rad' => '',
+        'em' => '',
+        'te' => '',
+        'zg' => ''
+    ];
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 
@@ -126,14 +135,16 @@
             }
     ?>
     <form method="post">
-        <p class="<?=$error['naz'] ? 'error' : ''?>">
+        <p>
+            <div class = "<?=$error['naz'] ? 'error' : ''?>">
             <label for="naz">Nazwa towaru</label> <o>*</o><br>
-            <input type="text" name="naz" id="naz" class="<?=$nazwapro ? 'error' : ''?>" value="<?=$_POST['naz'] ?? ''?>"><br>
-
+            <input type="text" name="naz" id="naz" class="<?=$data['naz'] ? 'error' : ''?>" value="<?=$_POST['naz'] ?? ''?>"><br>
+            </div>
             <div class="error"> <?= $error['naz'] ?? '' ?> </div>
 
         </p>
-        <p class="<?=$error['wyb'] ? 'error' : ''?>">
+        <p>
+        <div class = "<?=$error['wyb'] ? 'error' : ''?>">
             Wybierz opcje pakowania:  <o>*</o><br>
             <input type="checkbox" name="wyb[]" id="1" <?= in_array('koperta', $data['wyb']) ? 'checked' : '' ?>> 
             <label for="1">koperta</label><br>
@@ -149,9 +160,11 @@
 
             <input type="checkbox" name="wyb[]" id="5"  value="karton z usztywnieniem" <?= in_array('karton z usztywnnieniem', $data['wyb']) ? 'checked' : '' ?>>
             <label for="5">karton z usztywnieniem</label><br>
+        </div>
             <div class="error"> <?= $error['wyb'] ?? '' ?> </div>
         </p>
-        <p class="<?$error['rad'] ? 'error' : ''?>">
+        <p>
+        <div class = "<?=$error['rad'] ? 'error' : ''?>">
             Podaj wagę paczki: <o>*</o><br>
             <input type="radio" name="rad" id="11"  value="do 2 kg" <?= $data['rad'] === 'do 2 kg' ? 'checked' : '' ?>>
             <label for="11">do 2 kg</label><br>
@@ -164,23 +177,29 @@
 
             <input type="radio" name="rad" id="14"  value="od 10 kg do 15 kg" <?= $data['rad'] === 'do 2 kg' ? 'checked' : '' ?>>
             <label for="14">od 10 kg do 15 kg</label><br>
+        </div>
             <div class="error"> <?= $error['rad'] ?? '' ?> </div>
         </p>
 
-        <p class="<?=$error['em'] ? 'error' : ''?>">
-
+        <p>
+        <div class = "<?=$error['em'] ? 'error' : ''?>">
             <label for="33">Email kontaktowy <o>*</o></label><br>
             <input type="email" name="em" id="33" class="<?=$em ? 'error' : ''?>" value="<?=$_POST['em'] ?? ''?>"><br>
+        </div>
             <div class="error"> <?= $error['em'] ?? '' ?> </div>
 
         </p>
-        <p class="<?=$error['te'] ? 'error' : ''?>">
+        <p>
+        <div class = "<?=$error['te'] ? 'error' : ''?>">
             <label for="44">Dodatkowe informacje <o>*</o></label><br>
             <textarea rows="3" cols="20" name="te" id="44" class="<?=$text ? 'error' : ''?>" value="<?=$_POST['te'] ?? ''?>"></textarea><br>
+        </div>
             <div class="error"> <?= $error['te'] ?? '' ?> </div>
         </p>
-        <p class="<?=$error['zg'] ? 'error' : ''?>">
+        <p>
+        <div class = "<?=$error['zg'] ? 'error' : ''?>">
             <input type="checkbox" name="zg" id="55" class="<?=$zg ? 'error' : ''?>" value="<?=$_POST['zg'] ?? ''?>"><label for="55"> Zgoda na przetwarzanie danych</label> <o>*</o><br>
+        </div>
             <div class="error"> <?= $error['zg'] ?? '' ?> </div>
         </p>
         <p>

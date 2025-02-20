@@ -29,28 +29,23 @@ fieldset{
         <?php 
         
     if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['litera'])){
-        $i=$_POST['litera'];
-        $p = 1;
         if(!empty($_POST['litera'])){
             if(count($_POST['litera']) > 1){
                 echo "Te litery zostały wybrane: ";
-                foreach($_POST['litera'] as $litera){
-                    if($p == count($_POST['litera'])){
-                        echo $litera.".";
+                    if(count($_POST['litera']) == 1){
+                        echo implode(', ',$_POST['litera']).".";
                     } else{
-                        echo $litera.", ";
+                        echo implode(', ',$_POST['litera']).".";
                     }
-                    $i++;
+                }else{
+                echo "Ta litera została wybrana : ".implode(' ',$_POST['litera']).".";
                 }
-            } else{
-                echo "Ta litera została wybrana : ".$i.".";
-                }
-            }
-        }else{
+            }else if(count($_POST['litera']) == 0){
+            
             echo "Żadna litera nie została wybrana";
         }
-
-
+    }
+          
     
 ?>
     </form>
