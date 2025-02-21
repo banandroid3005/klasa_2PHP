@@ -44,11 +44,12 @@
         <table>
             <caption>Terminy</caption>
             <?php
-                $plik = true;
+                $plik = false;
                 for($i=1;$i<=5;$i++){
                     $termin = "termin_".$i;
                     $month = "Rok_".$i;
                     $checked = (in_array($termin,$_POST['termin'] ?? []) && isset($_POST[$month]) ? 'checked' : '');
+                    $plik = ($plik || $checked);
             ?>
             <tr>
                 <td>
@@ -79,7 +80,6 @@
         <pre>
             <?php
                 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                    $plik = (in_array($termin,($_POST['termin'] ?? [])) && isset($_POST[$month])) ? true : false;
                     if($plik){
                         $file = 'plik.txt';
                         $filehandle = fopen($file,"a");
