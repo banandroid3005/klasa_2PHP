@@ -1,7 +1,5 @@
-<!--
-<?php/*
+<?php
 session_start();
-include 'menu.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,21 +7,56 @@ include 'menu.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona logowania</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Strona Logowania</h1>
+    <?php include 'menu.php'; ?>
+    <h1>Strona logowania</h1>
     <?php
-        if($_SESSION['czy'] == false){
+        if($_SERVER["REQUEST_METHOD"] === "POST")
+        {
+            if(isset($_POST["wyloguj"]))
+            {
+                $_SESSION["login_status"] = false;
+                session_destroy();
+            }
+
+            if(isset($_POST["zaloguj"]))
+            {
+                if($_POST['login'] === 'admin' && $_POST['pass'] == 'admin' )
+                {
+                    echo "<p>Udane logowanie</p>";
+                    $_SESSION["login_status"] = true;
+                    $_SESSION['login'] = $_POST['login'];
+                    $_SESSION['pass'] = $_POST['pass'];
+                }
+                else
+                {
+                    echo "<p>Dane logowania są niepoprawne</p>";
+                }
+            }
+        } 
     ?>
     <form method="post">
+        <?php
+        if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){
+            ?>
+            <p>
+                Jesteś zalogowany jako <?=$_SESSION['login']?>
+            </p>
+        <p>
+            <input type="submit" name="wyloguj" value="Wyloguj się">
+        </p>      
+    <?php
+        }else{
+            ?>
     <p>
         <label for="imie">Podaj login</label><br>
-        <input type="text" name="imie" id="imie">
+        <input type="text" name="login" id="imie">
     </p>
     <p>
         <label for="has">Podaj hasło</label><br>
-        <input type="password" name="has" id="has">
+        <input type="password" name="pass" id="has">
     </p>
     <p>
         <input type="submit" name="zaloguj" value="Zaloguj się">
@@ -31,30 +64,7 @@ include 'menu.php';
     </form>
     <?php
         }
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        if($_POST['imie'] == $_SESSION['im'] && $_POST['has'] == $_SESSION['has']){
-            echo "Zalogowałeś się!";
-            $_SESSION['im'] = $_POST['imie'];
-            $_SESSION['czy'] = true;
-            $_SESSION['zledane'] = true;
-        }else{
-            echo "Złe dane";
-            $_SESSION['zledane'] = false;
-            $_SESSION['im'] = null;
-        }
-    }
-    if($_SESSION['czy'] == true && $_SESSION['zledane'] == true){
-    ?>
-    <p>
-        Jesteś zalogowany
-    </p>
-    <p>
-        <input type="submit" name="wyloguj" value="Wyloguj się">
-    </p>
-    <?php
-    }
-    */
+        include 'stopka.php';
     ?>
 </body>
 </html>
--->

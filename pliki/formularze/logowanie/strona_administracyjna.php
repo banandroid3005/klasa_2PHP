@@ -1,9 +1,5 @@
 <?php
 session_start();
-include 'menu.php';
-$_SESSION['im'] ='Admin';
-$_SESSION['has'] = 'Admin123';
-$_SESSION['zledane'] = false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +10,10 @@ $_SESSION['zledane'] = false;
     <title>Strona administracyjna</title>
 </head>
 <body>
-    <h1>Panel administracyjny</h1>
-   
+<?php include 'menu.php'; ?>
+<h1>Panel administracyjny</h1>
+<p>Status: <?php echo isset($_SESSION['login']) ? "Zalogowany jako " . $_SESSION['login'] : "Niezalogowany"; ?></p>
+<?php include 'stopka.php'; ?>
+
 </body>
 </html>

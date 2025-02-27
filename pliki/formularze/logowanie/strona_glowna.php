@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'menu.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,15 +10,19 @@ include 'menu.php';
     <title>Strona główna</title>
 </head>
 <body>
-    <h1>Strona domowa</h1>
-    <?php
-    if(isset($_SESSIOJ['im'])){
-        echo "Witaj ".$_SESSION['im']."<br>";
-        $_SESSION['czy'] = true;
+<?php include 'menu.php'; ?>
+<h1>Moja Strona</h1>
+<p>
+    <?php 
+    if(isset($_SESSION["login_status"]) != false){
+        echo "Witaj ".$_SESSION['login'];
     }else{
-        echo "Witaj gościu <br>";
-        $_SESSION['czy'] = false;
+        echo "Witaj gościu";
     }
     ?>
+    </p>
+<?php include 'stopka.php'; ?>
+
+
 </body>
 </html>

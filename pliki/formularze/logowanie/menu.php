@@ -7,6 +7,6 @@
 </style>
 <div>
     <a href="strona_glowna.php">Strona głowna</a>
-    <a href="strona_logowania">Logowanie</a>
-    <a href="strona_administracyjna">Panel administracyjny</a>
+    <a href="strona_logowania.php">Logowanie</a>
+    <a href="strona_administracyjna.php">Panel administracyjny</a>
 </div>
