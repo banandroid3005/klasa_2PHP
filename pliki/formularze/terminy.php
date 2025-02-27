@@ -22,7 +22,7 @@
             border-collapse: collapse;
         }
         td{
-            border: solid gray;
+            border: 1px solid gray;
             padding: 10px;
             text-align: center;
         }
@@ -73,17 +73,20 @@
             </tr>
         </table>
         <pre>
-            <?php
-                print_r($_POST);
+            <?php 
+            if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                $j = json_encode($_POST);
+                echo $j."<br>";
             ?>
         </pre>
         <pre>
             <?php
-                if($_SERVER['REQUEST_METHOD'] === 'POST'){
+               
                     if($plik){
+                        echo "Dane zostały przesłane do pliku <br>";
                         $file = 'plik.txt';
-                        $filehandle = fopen($file,"a");
-                        $wpisz = date("Y-m-d H: i s") . "\n".print_r($_POST,true);
+                        $filehandle = fopen($file,"w");
+                        $wpisz = date("Y-m-d H: i s") . "\n".$j."\n";
                         $file = fwrite($filehandle,$wpisz);
                         $file = fclose($filehandle);
                     }
