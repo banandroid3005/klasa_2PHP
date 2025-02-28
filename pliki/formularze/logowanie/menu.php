@@ -1,8 +1,11 @@
 
 <style>
-    a{
+    div{
         text-align: center;
         padding: 50px;
+    }
+    a{
+        padding: 20px;
     }
 </style>
 <div>

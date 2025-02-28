@@ -8,10 +8,16 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona główna</title>
+<style>
+    body{
+        background-color:bisque;
+        padding: 30px;
+    }
+</style>
 </head>
 <body>
 <?php include 'menu.php'; ?>
-<h1>Moja Strona</h1>
+<h1>Strona głowna</h1>
 <p>
     <?php 
     if(isset($_SESSION["login_status"]) != false){

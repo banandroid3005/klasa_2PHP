@@ -1,3 +1,10 @@
+<style>
+    footer{
+        padding: 10px;
+        text-align: center;
+        background-color: burlywood;
+    }
+</style>
 <footer>
-    <p>Moja Strona &copy; <?php echo date("Y"); ?></p>
+    <p>Filip Pakuła &copy; <?php echo date("Y"); ?></p>
 </footer>
