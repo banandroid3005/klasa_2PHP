@@ -15,8 +15,8 @@ session_start();
 <style>
     body
     {
-        background-color:gainsboro;
-        padding:30px;
+        background: linear-gradient(to right, #ff007f, #8a2be2);
+        padding:100px;
         font-family: "Merriweather", serif;
         font-weight: 400;
         font-style: normal;
