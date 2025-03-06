@@ -3,7 +3,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
 <style>
-  
     footer {
         padding: 10px;
         text-align: center;
@@ -12,10 +11,10 @@
         font-style: normal;
         background-color: #2c3e50;
         color: white;
-        width: 100%; 
-        margin-top: 30px; 
+        width: 100%;
+        margin-top: 30px;
         box-sizing: border-box;
-        position: relative;
+        position: sticky;
         bottom: 0;
     }
 
@@ -23,8 +22,6 @@
         margin: 0;
         font-size: 16px;
     }
-
-
 </style>
 
 <footer>

@@ -3,20 +3,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
 <style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 50px;
+        background-color: #2c3e50;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin: 0 auto;
+    }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 50px;
-    background-color: #2c3e50;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ustalamy szerokość na 100% */
-    margin: 0 auto; /* Ustawiamy automatyczny margines */
-}
-
-
-header a {
+    div a {
     margin: 0 20px;
     padding: 12px 25px;
     font-size: 18px;
@@ -28,19 +26,27 @@ header a {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-header a:hover {
+div a:hover {
     background-color: #2980b9;
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 91, 187, 0.4);
 }
 
-header a:active {
+div a:active {
     transform: scale(0.98);
 }
+
+
+div a:focus {
+    background-color: #1abc9c; 
+    color: white;
+    text-decoration: underline; 
+}
+
 </style>
 
-<header>
-    <a href="index.php">Strona główna</a>
+<div>
+    <a href="index.php" class="active">Strona główna</a>
     <a href="strona_logowania.php">Logowanie</a>
     <a href="strona_administracyjna.php">Panel administracyjny</a>
-</header>
+</div>
