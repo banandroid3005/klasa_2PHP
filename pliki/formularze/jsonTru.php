@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON trudniejszy</title>
+<style>
+    fieldset{
+        padding: 10px;
+        border: solid 2px blanchedalmond;
+        margin-top: 20px;
+    }
+    </style>
 </head>
 <body>
     <h4>Sprawdź przybliżoną lokalizację adresu IP v 4</h4>
@@ -31,12 +38,15 @@
             $ip = trim($_POST['adres']);
             $url = "http://ip-api.com/json/" . $ip;
             $json = file_get_contents($url);
+            echo "<fieldset>";
             echo "JSON: ".$json;
-            echo "\n";
+            echo "</fieldset>";
             $json = json_decode($json,true);
+            echo "<fieldset>";
             echo "<pre>";
             print_r($json);
             echo "</pre>";
+            echo "</fieldset>";
         }
     ?>
     </p>
