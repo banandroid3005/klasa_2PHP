@@ -42,7 +42,7 @@ session_start();
             max-width: 700px;
             box-sizing: border-box;
             transition: transform 0.3s ease-in-out;
-            margin-left: 900px;
+            margin-left: 600px;
         }
 
         form:hover {

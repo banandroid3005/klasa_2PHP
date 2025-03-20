@@ -32,7 +32,6 @@ session_start();
             padding: 40px;
             width: 90%;
             max-width: 700px;
-            margin-left: 900px;
             box-sizing: border-box;
             transition: transform 0.3s ease-in-out;
             height: 400px;
