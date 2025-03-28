@@ -26,7 +26,7 @@
              echo "<p class = dobre> Poprawna odpowiedź"; 
             }else{
                 echo "<p class = zle>Niepoprawna odpowiedź </p>";
-                echo "<p class = zle> Poprawna odpowiedź to: {$_SESSION['correct_answer']}";
+                echo "<p class = zle> Poprawna odpowiedź to: <span class=zie>{$_SESSION['correct_answer']}</span>";
             }
             ?></p>
     <?php
@@ -36,6 +36,7 @@
     </div>
         </div>
         <?php
+            include 'footer.php';
             session_destroy();
         ?>
 </body>
