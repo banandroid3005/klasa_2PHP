@@ -14,7 +14,7 @@
 <body>
     <?php
 
-        $url = 'https://opentdb.com/api.php?amount=1&category=18&type=multiple';
+        $url = 'https://opentdb.com/api.php?amount=1&type=multiple';
         $json = file_get_contents($url);
         if($json){
             $data = json_decode($json,true);
@@ -44,6 +44,7 @@
             <input type="radio" name="user_answer" id="user_answer_<?=$answer?>" value="<?= htmlspecialchars($answer) ?? ''?>" required>
             <label for="user_answer_<?=$answer?>"><?=$answer?></label><br>
             <?php }?></p>
+            
         <button type="submit" >Sprawdź odpowiedź</button>
     </form>
         </div>
