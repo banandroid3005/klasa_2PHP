@@ -1,10 +1,57 @@
 .container{
     margin: auto;
     width: 50%;
-    justify-content: left;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: blanchedalmond;
+    margin-top: 30px;
 }
 a{
     margin: auto;
     width: 50%; 
     text-align: center;
+}
+.zle{
+    background-color: #FF7377;
+    width: 30%;
+}
+.dobre{
+    background-color: lightgreen;
+    width: 20%;
+}
+body{
+    height: 100%;
+    background-color: #e6e6fa;
+    font-family: "Noto Sans Gunjala Gondi", sans-serif;
+    font-optical-sizing: auto;
+}
+button{
+    background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+button:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1,1.1);
+}
+label{
+    padding: 4px;
+}
+input[type=radio]{
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.text{
+    margin-left: 50px;
 }
