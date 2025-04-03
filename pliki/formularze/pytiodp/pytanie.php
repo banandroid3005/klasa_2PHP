@@ -20,7 +20,8 @@
     </div>
     <?php
     $url = 'https://opentdb.com/api.php?amount=1&type=multiple';
-    $json = file_get_contents($url);
+    //$json = file_get_contents($url);
+    $json='{"response_code":0,"results":[{"type":"multiple","difficulty":"hard","category":"Entertainment: Japanese Anime &amp; Manga","question":"In the anime Initial D, how does Takumi Fujiwara describe a drift?","correct_answer":". . . the front tires slide so the car won; t face the inside","incorrect_answers":[". . . the wheels lose traction, making the car slide sideways",". . . the car oversteers through a curve, causing it to turn faster",". . . you turn a lot"]}]}';
     if ($json) {
         $data = json_decode($json, true);
         if ($data['response_code'] == 0) {
@@ -38,7 +39,7 @@
         }
     }
     ?>
-    <div class="container">
+    <div class="container1">
         <div class="text">
             <form action="odpowiedz.php" method="post">
                 <h1>Quiz z OpenTDB</h1>
@@ -54,6 +55,7 @@
                 <button type="submit">Sprawdź odpowiedź</button>
             </form>
         </div>
+        <img src="jaj.jfif" alt="Coś się zepsuło">
     </div>
     <?php include 'footer.php'; ?>
     <script>

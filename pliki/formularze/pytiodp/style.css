@@ -6,14 +6,37 @@ body {
   padding: 0;
 }
 
-.container {
+.container2 {
   margin: auto;
-  width: 50%;
+  width: 70%;
+  height: 500px;
   padding: 50px;
   border-radius: 20px;
   background-color: #ecf0f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
+}
+
+.container1 {
+  margin: auto;
+  width: 70%;
+  height: 400px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #ecf0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+img{
+  display: inline-block;
+  margin-left: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  margin-left: 20px;
+  float: left;
 }
 
 a {
@@ -52,10 +75,6 @@ button {
 button:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
-}
-
-.text {
-  margin-left: 20px;
 }
 
 .zle {
@@ -170,6 +189,7 @@ body.dark-mode button:hover {
   align-items: center;
   justify-content: flex-start;
   margin: 20px;
+  color: crimson;
 }
 
 .theme-switch input[type="checkbox"] {

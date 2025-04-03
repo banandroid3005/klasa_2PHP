@@ -19,7 +19,7 @@
     <?php
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['user_answer'])){
     ?>
-    <div class="container">
+    <div class="container2">
         <div class="text">
         <h1>Odpowiedź</h1>
         <p>Trudność: <?=$_SESSION['difficulty']?></p>
@@ -37,7 +37,9 @@
         }
         ?>
         <a href="pytanie.php">Kolejne pytanie</a>
-    </div>
+        </div>
+        <img src="baranek.jfif" alt="Coś się zepsuło">
+    
         </div>
         <?php
             include 'footer.php';
@@ -47,7 +49,7 @@
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
-        // Sprawdź, czy użytkownik ma zapisany motyw w localStorage
+ 
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
@@ -58,11 +60,11 @@
             if (themeToggle.checked) {
                 body.classList.remove('light-mode');
                 body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark'); // Zapisz motyw w localStorage
+                localStorage.setItem('theme', 'dark'); 
             } else {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light'); // Zapisz motyw w localStorage
+                localStorage.setItem('theme', 'light'); 
             }
         });
     </script>
