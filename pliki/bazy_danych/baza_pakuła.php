@@ -15,11 +15,14 @@ $database = "pakuła";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
-
 if ($conn->connect_error) {
   die("Nie połączono: " . $conn->connect_error);
 }
+
 echo "Udane połączenie";
+
+$conn->close();
+
 ?>
 
 </body>
