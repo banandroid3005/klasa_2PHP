@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Napisana przez</title>
 </head>
 <body>
     <?php
@@ -13,7 +13,7 @@ $password = "banan123";
 $database = "pakuła";
 
 $conn = mysqli_connect($servername,$username,$password,$database);
-/*
+/* 
 if ($conn->connect_error) {
   die("Nie połączono: " . $conn->connect_error);
 }
