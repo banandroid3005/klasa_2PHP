@@ -33,7 +33,7 @@
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-    ?>
+    ?> 
         <h1>Wynik</h1>
         <table>
             <tr>
