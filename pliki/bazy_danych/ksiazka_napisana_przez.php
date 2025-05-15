@@ -8,9 +8,9 @@
 <body>
     <?php
 $servername = "localhost";
-$username = "pakuła";
+$username = "pakula";
 $password = "banan123";
-$database = "pakuła";
+$database = "pakula";
 
 $conn = mysqli_connect($servername,$username,$password,$database);
 /* 
